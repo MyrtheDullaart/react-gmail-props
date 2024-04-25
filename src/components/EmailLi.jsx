@@ -1,4 +1,22 @@
-function EmailLi({ toggleRead, toggleStar, email, setActiveEmail }) {
+function EmailLi({ email, setEmails, setActiveEmail }) {
+
+    const toggleStar = targetEmail => {
+        const updatedEmails = emails =>
+          emails.map(email =>
+            email.id === targetEmail.id
+              ? { ...email, starred: !email.starred }
+              : email
+          )
+        setEmails(updatedEmails)
+      }
+    
+      const toggleRead = targetEmail => {
+        const updatedEmails = emails =>
+          emails.map(email =>
+            email.id === targetEmail.id ? { ...email, read: !email.read } : email
+          )
+        setEmails(updatedEmails)
+      }
 
     return (
         <li className={`email ${email.read ? 'read' : 'unread'}`}>

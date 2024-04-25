@@ -144,3 +144,34 @@
 .email .star-checkbox:checked::before {
   background-image: url(https://www.gstatic.com/images/icons/material/system/2x/star_googyellow500_20dp.png);
 }
+
+.active-email {
+  display: grid;
+  grid-template-rows: 40px 70px 1fr;
+  gap: 1rem;
+}
+
+#back-button {
+  padding: 5px 20px;
+  background-color: rgb(101, 162, 248);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.email-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.email-info h2 {
+  font-size: 1.2rem;
+}
+
+.email-info {
+  border-top: 1px rgb(207, 205, 205) solid;
+  border-bottom: 1px rgb(207, 205, 205) solid;
+  display: grid;
+  padding: 10px 0px;
+}

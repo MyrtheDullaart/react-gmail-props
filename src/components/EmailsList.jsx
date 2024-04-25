@@ -1,12 +1,12 @@
 import EmailLi from "./EmailLi"
 
-function EmailsList({ filteredEmails, toggleStar, toggleRead, setActiveEmail }) {
+function EmailsList({ filteredEmails, setEmails, setActiveEmail }) {
  
     return (
         <main className="emails">
             <ul>
                 {filteredEmails.map((email, index) => (
-                    <EmailLi key={index} email={email} toggleRead={toggleRead} toggleStar={toggleStar} setActiveEmail={setActiveEmail}/>
+                    <EmailLi key={index} email={email} setEmails={setEmails} setActiveEmail={setActiveEmail}/>
                 ))}
             </ul>
         </main>
