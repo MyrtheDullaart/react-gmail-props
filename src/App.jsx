@@ -3,7 +3,6 @@ import { useState } from 'react'
 import initialEmails from './data/emails'
 
 import './styles/App.css'
-import Emails from './data/emails'
 import EmailsList from './components/EmailsList'
 
 const getReadEmails = emails => emails.filter(email => !email.read)
