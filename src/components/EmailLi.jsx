@@ -1,4 +1,5 @@
-function EmailLi({ toggleRead, toggleStar, email }) {
+function EmailLi({ toggleRead, toggleStar, email, setActiveEmail }) {
+
     return (
         <li className={`email ${email.read ? 'read' : 'unread'}`}>
             <div className="select">
@@ -17,8 +18,8 @@ function EmailLi({ toggleRead, toggleStar, email }) {
                         onChange={() => toggleStar(email)}
                     />
                 </div>
-                <div className="sender">{email.sender}</div>
-            <div className="title">{email.title}</div>
+                <div className="sender" onClick={() => {setActiveEmail(email)}}>{email.sender}</div>
+            <div className="title" onClick={() => {setActiveEmail(email)}}>{email.title}</div>
         </li>
     )
 }
